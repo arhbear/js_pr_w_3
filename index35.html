@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var color = prompt('Какого цвета гриб?');
+            var skirt = confirm('Есть на ножке юбка?');
+            switch (color){
+                case 'белый':{
+                    if (skirt) alert('С грибами нужно быть внимательными');
+                    else alert('Вы нашли белый гриб');
+                    break;
+                }
+                case 'красный':{
+                    if (skirt) alert('А не мухомор ли это?');
+                    else alert('Может это подосиновик');
+                    break;
+                }
+                case ' желтый':{
+                    alert('С грибами нужно быть внимательными');
+                    break;
+                }
+                case 'коричневый':{
+                    alert('С грибами нужно быть внимательными');
+                    break;
+                }
+                default: alert('С грибами нужно быть внимательными');
+            }
+        </script>
+    </body>
+</html>
