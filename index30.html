@@ -43,7 +43,6 @@
                 return m;
             }
             function power1(o,p){
-                alert('power1 start')
                 var i = 10;
                 while(Number.isInteger(i * p) == false){
                     i *= 10;
@@ -53,18 +52,16 @@
                 var zn = Math.abs(i / n);
                 if (o < 0 && zn % 2 == 0) {alert('NaN'); return NaN;}
                 if (Math.abs(o) === 1) {
-                    alert('abs = 1');
-                    if (ch % 2 === 0) {alert('ch%2=0'); return 1;}
-                    else {alert('else'); return o;}
+                    if (ch % 2 === 0)  return 1;
+                    else  return o;
                 }
-                alert('o='+o);
                 var top = o;
                 var bot = 0.0;
                 while (power(m, zn)  !== o){
                     if (m === (top + bot) / 2) return m;
                     var m = (top + bot) / 2;
                     if (Math.abs(power(m, zn)) > Math.abs(o)) top = m;
-                    else bot = power(m,ch);
+                    else bot = m;
                 }
                 return power(m,ch);
             }
